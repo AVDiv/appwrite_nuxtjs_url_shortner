@@ -1,14 +1,23 @@
-// https://v3.nuxtjs.org/api/configuration/nuxt.config
-
-export default defineNuxtConfig({
+export default {
+  serverMiddleware:[
+    // 'redirect-ssl',
+    {path: "/api", handler: "~/api/checkAvailableName.js"},
+  ],
   css: ['~/assets/css/tailwind.css'],
   build: {
     postcss: {
-      postcssOptions: require('./postcss.config.js'),
+      plugins: {
+        tailwindcss: {},
+        autoprefixer: {},
+      },
     },
   },
-  image:{
-    
-  },
+  components: true,
+  buildModules: [
+    '@nuxtjs/tailwindcss',
+    '@nuxt/postcss8',
+  ],
+  modules: [
+
+  ],
 }
-)
