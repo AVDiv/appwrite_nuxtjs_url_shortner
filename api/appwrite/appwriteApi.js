@@ -18,4 +18,14 @@ export class AppwriteApi{
             ]
         );
     }
+    createDocument(url, token) {
+        return sdk.createDocument(
+            appwriteConfig.DATABSASE_ID,
+            appwriteConfig.COLLECTION_ID,
+            "unique()",
+            {
+                'url': url,
+                'token': token
+            });
+    }
 }

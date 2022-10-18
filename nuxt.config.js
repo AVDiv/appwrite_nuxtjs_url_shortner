@@ -1,7 +1,7 @@
 export default {
   serverMiddleware:[
     // 'redirect-ssl',
-    {path: "/api", handler: "~/api/checkAvailableName.js"},
+    {path: "/api", handler: "~/api/index.js"},
   ],
   css: ['~/assets/css/tailwind.css'],
   build: {
