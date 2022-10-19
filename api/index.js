@@ -28,7 +28,18 @@ app.get('/available_name', async (req, res) => {
   }
 });
 
-// Creates new URL
+// Checks validity of URL name
+app.post('/check_name', async (req, res) => {
+    const name = req.body.name;
+    const pattern = /^\b[a-z0-9-_]*$/g;
+    if (name && name.match(pattern)!==null){
+        res.status(200).json({is_valid: true});
+    } else {
+        res.status(200).json({is_valid: false});
+    }
+});
+
+// Creates new short URL
 app.post('/create_url', async (req, res) => {
     const url = req.body.url;
     const url_name = req.body.name;
