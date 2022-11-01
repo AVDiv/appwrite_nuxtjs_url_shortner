@@ -1,3 +1,40 @@
 @tailwind base;
 @tailwind components;
+.input-label{
+    @apply relative px-2 z-10 bg-transparent;
+}
+.button{
+  @apply  bg-blue-600 text-white border-none
+          enabled:hover:bg-white enabled:hover:text-blue-600
+          rounded-[35px] p-4
+          shadow-md shadow-[#00000040]
+          hover:shadow hover:shadow-[#00000035]
+          transition-all duration-500 ease-in-out
+          cursor-pointer;
+}
+.button:disabled{
+  @apply cursor-not-allowed opacity-60;
+}
+.button.invalid{
+  @apply !bg-red-600;
+}
+.button.valid{
+  @apply !bg-green-500;
+}
+.button.loading{
+  @apply !bg-gray-400
+          !cursor-progress;
+}
 @tailwind utilities;
+
+@layer base{
+  *{
+    text-decoration: none;
+  }
+  html{
+    font-family: Poppins;
+  }
+  a{
+    display: inline-flex;
+  }
+}
