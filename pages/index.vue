@@ -193,7 +193,7 @@ export default {
         </div>
         <div :class="['h-full w-full flex justify-center items-center', short_link_status?'visible': 'hidden']">
           <div class="w-[70%] h-14 bg-green-100 text-green-500 border-b-4 border-green-300 rounded-md flex flex-row">
-            <div class="h-full w-full flex justify-center items-center overflow-x-scroll">
+            <div class="h-full w-full flex justify-center items-center overflow-x-auto">
               <p>{{ short_link }}</p>
             </div>
             <div class="h-full w-14 border-l-2 border-inherit ">
