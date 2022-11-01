@@ -11,13 +11,24 @@ export default {
         autoprefixer: {},
       },
     },
+    transpile: [
+      'axios',
+    ],
   },
   components: true,
   buildModules: [
     '@nuxtjs/tailwindcss',
     '@nuxt/postcss8',
   ],
+  // plugins: [
+  //   '~/plugins/axios',
+  // ],
   modules: [
-
+    // 'axios',
+    '@nuxtjs/axios',
+    'nuxt-clipboard2',
   ],
+  axios: {
+    baseURL: 'http://localhost:4000/api',
+  },
 }
