@@ -1,7 +1,7 @@
 <script>
 export default {
   head: {
-    title: 'Page not found',
+    title: 'Unexpected error',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -11,16 +11,24 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ],
   },
+  data(){
+    return {
+      status: "",
+    }
+  },
+  async asyncData({ params, redirect }){
+    this.status = params.status;
+  },
 }
 </script>
 <template>
   <div class="container">
     <div class="w-screen h-screen flex justify-center items-center">
       <div class="flex flex-col">
-        <h1 class="text-blue-600 text-[150px] self-center leading-[120px]">404</h1>
-        <h2 class="text-blue-500 text-5xl self-center">Page not found</h2>
+        <h1 class="text-blue-600 text-[150px] self-center leading-[120px]">{{ status }}</h1>
+        <h2 class="text-blue-500 text-5xl self-center">Unexpected error</h2>
         <div class="p-5 text-lg text-blue-800">
-          <p class="lead">The page you are looking for does not exist.</p>
+          <p class="lead">The website has got an unexpected error.</p>
           <p class="lead">
             <nuxt-link to="/">Go back to the homepage</nuxt-link>
           </p>
