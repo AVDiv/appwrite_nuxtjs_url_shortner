@@ -12,6 +12,13 @@
    <font color="#6495ed">&cirmid;&nbsp;&nbsp;</font>Note that this is just a <b> Demo product</b> and <b>cannot be used as a commercial product.</b>
  </li>
 </ul>
+<img src="readme_resources/Screenshot_DEURL - Brave_2.png" alt="DeURL home">
+<center>
+<div>
+<img src="readme_resources/Screenshot_DEURL - Brave_3.png" width="50%" >
+<img src="readme_resources/Screenshot_DEURL - Brave_5.png" width="50%">
+</div>
+</center>
 <hr>
 
 ## Setup 🧰
@@ -226,7 +233,7 @@ So, in the second layer of API calls, as the nuxt backend makes the request from
 So, the ideal to resolve this error is to get an SSL certificate. But, As this project is not a app hosted or used as a end-product. We could disable the SSL verfication option in node. <br>
 Enter this command in your terminal:
 ```bash
-  export NODE_TLS_REJECT_UNAUTHORIZED=0
+export NODE_TLS_REJECT_UNAUTHORIZED=0
 ```  
 Note: This is never recommended for production use. Also, remember to ON SSL verification after you are done with looking the project.
 ```bash
