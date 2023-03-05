@@ -155,13 +155,13 @@ npm run dev
 ## Got errors? 🤯😭
 <p id="errors">
     This is the worst part of every project.🤪<br><br>
-    Here are some fixes for issues that we ran into, In case you run into issues other than the listed, Please feel free to list it as an the Issue.
+    Here are some fixes for issues that we ran into, In case you run into issues other than the listed, Please feel free to list it as an <b>Issue</b>.
 </p>
 <div>
 
 ### code:ELIFECYCLE
 <p>
-    If your getting an error like this,
+    If your error looks like this,
 </p>
 
 ```bash
@@ -235,7 +235,7 @@ Enter this command in your terminal:
 ```bash
 export NODE_TLS_REJECT_UNAUTHORIZED=0
 ```  
-Note: This is never recommended for production use. Also, remember to ON SSL verification after you are done with looking the project.
+<b>Note: This is never recommended for production use. Also, remember to ON SSL verification after you are done with looking the project.</b>
 ```bash
 export NODE_TLS_REJECT_UNAUTHORIZED=1
 ```
